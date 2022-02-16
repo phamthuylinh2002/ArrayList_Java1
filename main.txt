@@ -1,0 +1,51 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication201;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+ *
+ * @author DELL
+ */
+public class JavaApplication201 {
+    ArrayList<SInhVien>list=new ArrayList<>();
+    SInhVien sv=new SInhVien();
+   
+  public void addtoList(){
+      for (int i = 0; i <3; i++) {
+          list.add(new SInhVien("Ph13911","Thọ","UDPM", "IT16302"));
+      }
+  }
+  public int getIndex(String ma,ArrayList<SInhVien> list){
+     for(int i=0;i<list.size();i++){
+         if(ma.equals(list.get(i).getMasv())){
+             return i;
+         }
+     }
+     return -3;
+  }
+  public void xuat(){
+      for (SInhVien x : list) {
+          System.out.println(x.getHoten());
+      }
+  }
+  
+    public static void main(String[] args) {
+        
+         Scanner sc=new Scanner(System.in);
+     JavaApplication201 sv=new JavaApplication201();
+     sv.addtoList();
+     sv.xuat();
+        System.out.println("Moi ban nhap ma ");
+        String ma=sc.nextLine();
+        
+        // sv = list.get(vitri).
+        
+    }
+    
+}
